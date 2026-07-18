@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>熱門遊戲福利</title>
+<style>
+  body{margin:0;background:#dbe3ee;font-family:sans-serif}
+  .box{max-width:1100px;margin:0 auto;padding:20px}
+  .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .head h2{margin:0;font-size:18px}
+  .head span{font-size:12px;color:#6b7280}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.08);text-decoration:none;color:#111;transition:.2s}
+  .card:hover{transform:translateY(-5px)}
+  .card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#ccc}
+  .card p{margin:0;padding:10px 12px;font-size:14px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="head">
+    <h2>🔥 熱門遊戲福利</h2>
+    <span>點擊圖片即可前往領取</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="https://你的领取链接1" target="_blank"><img src="roblox.jpg"><p>ROBLOX</p></a>
+    <a class="card" href="https://你的领取链接2" target="_blank"><img src="valorant.jpg"><p>特戰英豪</p></a>
+    <a class="card" href="#" target="_blank"><img src="aov.jpg"><p>傳說對決</p></a>
+    <a class="card" href="#" target="_blank"><img src="love.jpg"><p>戀與深空</p></a>
+    <a class="card" href="#" target="_blank"><img src="heartopia.jpg"><p>心動小鎮</p></a>
+    <a class="card" href="#" target="_blank"><img src="brawlstars.jpg"><p>荒野亂鬥</p></a>
+    <a class="card" href="#" target="_blank"><img src="dunk.jpg"><p>全明星街球派對</p></a>
+    <a class="card" href="#" target="_blank"><img src="battlecats.jpg"><p>貓咪大戰爭</p></a>
+    <a class="card" href="#" target="_blank"><img src="wuwa.jpg"><p>鳴潮</p></a>
+  </div>
+</div>
+</body>
+</html>
