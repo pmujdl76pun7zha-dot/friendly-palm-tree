@@ -2,30 +2,50 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>熱門遊戲福利</title>
+<title>遊戲福利中心</title>
 <style>
-body{margin:0;background:#dbe3ee;font-family:sans-serif}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.head{display:flex;justify-content:space-between;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#d9e2ef;font-family:-apple-system,BlinkMacSystemFont,"Microsoft JhengHei",sans-serif}
+.container{max-width:800px;margin:20px auto;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.banner{position:relative;width:100%;aspect-ratio: 16/8.5;background:url('banner.jpg') center/cover no-repeat}
+.banner::after{content:'';position:absolute;left:50%;bottom:-35px;transform:translateX(-50%);width:76px;height:76px;background:#fff;border-radius:50%;box-shadow:0 4px 15px rgba(0,0,0,.2);z-index:3}
+.banner-badge{position:absolute;left:50%;bottom:-32px;transform:translateX(-50%);width:68px;height:68px;background:radial-gradient(circle at 30% 30%, #2a4a9a, #0a1e5a);border-radius:50%;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;border:3px solid #fff}
+.main{padding:50px 20px 20px;text-align:center}
+.main h1{font-size:28px;font-weight:900}
+.main p{color:#666;font-size:13px;margin:10px 0 18px}
+.btn{display:inline-block;background:#16a34a;color:#fff;padding:12px 28px;border-radius:999px;font-weight:800;text-decoration:none}
+.tags{margin-top:14px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.tags span{font-size:12px;background:#f3f4f6;border:1px solid #e5e7eb;padding:5px 12px;border-radius:999px;color:#666}
+.wrap{padding:20px;background:#f5f7fb}
+.head{display:flex;justify-content:space-between;font-size:14px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 @media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
-.card{background:#fff;border-radius:16px;overflow:hidden;text-decoration:none;color:#111;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.card{background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;color:#111;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
-.card p{padding:10px 12px;margin:0;font-size:14px;font-weight:600}
+.card b{padding:10px 10px;display:block;font-size:13px}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="head"><b>🔥 熱門遊戲福利</b><span style="font-size:12px;color:#888">點擊圖片即可前往領取</span></div>
-  <div class="grid">
-    <a class="card" href="https://lin.ee/YtPRppH" target="_blank"><img src="roblox.jpg"><p>ROBLOX</p></a>
-    <a class="card" href="https://lin.ee/5iNywDE" target="_blank"><img src="valorant.jpg"><p>特戰英豪</p></a>
-    <a class="card" href="https://lin.ee/UYjQGxW" target="_blank"><img src="aov.jpg"><p>傳說對決</p></a>
-    <a class="card" href="https://lin.ee/PJFWNwU" target="_blank"><img src="brawlstars.jpg"><p>荒野亂鬥</p></a>
-    <a class="card" href="https://lin.ee/z8A1nze" target="_blank"><img src="dunk.jpg"><p>全明星街球派對</p></a>
-    <a class="card" href="#"><img src="love.jpg"><p>戀與深空</p></a>
-    <a class="card" href="#"><img src="heartopia.jpg"><p>心動小鎮</p></a>
-    <a class="card" href="#"><img src="battlecats.jpg"><p>貓咪大戰爭</p></a>
+<div class="container">
+  <div class="banner"><div class="banner-badge">🎮<span>福利<br>中心</span></div></div>
+  <div class="main">
+    <h1>遊戲福利中心</h1>
+    <p>提供多款熱門遊戲福利活動入口，立即領取最新活動與福利。</p>
+    <a class="btn" href="#games">🎁 立即領取福利</a>
+    <div class="tags"><span>官方福利入口</span><span>支援 10+ 款遊戲</span><span>持續更新中</span></div>
+  </div>
+  <div class="wrap" id="games">
+    <div class="head"><b>🔥 熱門遊戲福利</b><span style="color:#888;font-size:12px">點擊圖片即可前往領取</span></div>
+    <div class="grid">
+      <a class="card" href="https://lin.ee/YtPRppH" target="_blank"><img src="roblox.jpg"><b>ROBLOX</b></a>
+      <a class="card" href="https://lin.ee/5iNywDE" target="_blank"><img src="valorant.jpg"><b>特戰英豪</b></a>
+      <a class="card" href="https://lin.ee/UYjQGxW" target="_blank"><img src="aov.jpg"><b>傳說對決</b></a>
+      <a class="card" href="https://lin.ee/PJFWNwU" target="_blank"><img src="brawlstars.jpg"><b>荒野亂鬥</b></a>
+      <a class="card" href="https://lin.ee/z8A1nze" target="_blank"><img src="dunk.jpg"><b>全明星街球派對</b></a>
+      <a class="card" href="#"><img src="love.jpg"><b>戀與深空</b></a>
+      <a class="card" href="#"><img src="heartopia.jpg"><b>心動小鎮</b></a>
+      <a class="card" href="#"><img src="battlecats.jpg"><b>貓咪大戰爭</b></a>
+    </div>
   </div>
 </div>
 </body>
