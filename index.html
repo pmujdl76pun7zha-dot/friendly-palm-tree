@@ -3,37 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>熱門遊戲福利</title>
+<title>遊戲福利中心 - 最新福利活動免費領取</title>
 <style>
-  body{margin:0;background:#dbe3ee;font-family:sans-serif}
-  .box{max-width:1100px;margin:0 auto;padding:20px}
-  .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-  .head h2{margin:0;font-size:18px}
-  .head span{font-size:12px;color:#6b7280}
-  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  @media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
-  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.08);text-decoration:none;color:#111;transition:.2s}
-  .card:hover{transform:translateY(-5px)}
-  .card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#ccc}
-  .card p{margin:0;padding:10px 12px;font-size:14px;font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#d9e2ef;font-family: -apple-system,BlinkMacSystemFont,"Microsoft JhengHei",sans-serif;}
+.container{max-width:1100px;margin:20px auto;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.banner{position:relative;width:100%;aspect-ratio: 2.2/1;background:url('banner.jpg') center/cover no-repeat #0f1e3d;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px}
+/* 如果你没有banner.jpg，会显示蓝紫渐变备用 */
+.banner::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(15,30,61,.2), rgba(15,30,61,.6));z-index:1}
+.banner-content{position:relative;z-index:2}
+.banner h4{letter-spacing:4px;font-size:16px;text-shadow:0 2px 4px #000;margin-bottom:10px}
+.banner h1{font-size:52px;font-weight:900;letter-spacing:2px;text-shadow:0 4px 12px rgba(0,0,0,.6);line-height:1.1}
+.banner .tags{margin-top:18px;display:inline-flex;background:rgba(0,0,0,.45);border:1px solid #f7d774;border-radius:30px;padding:8px 18px;gap:20px;font-size:14px;backdrop-filter:blur(6px)}
+.badge{position:absolute;left:50%;bottom:-35px;transform:translateX(-50%);z-index:5;width:70px;height:70px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.2);border:4px solid #fff}
+.badge div{width:100%;height:100%;background:#0a2a7a;border-radius:50%;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;line-height:1.1;font-weight:700}
+.main{padding:60px 24px;text-align:center}
+.main h2{font-size:28px;margin-bottom:8px}
+.main p{color:#666;font-size:14px;margin-bottom:20px}
+.btn{display:inline-block;background:#22a95f;color:#fff;padding:14px 36px;border-radius:30px;font-weight:800;text-decoration:none;font-size:16px;box-shadow:0 6px 16px rgba(34,169,95,.4)}
+.btn:hover{background:#1d8f51}
+.mini{margin-top:16px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.mini span{font-size:12px;color:#666;background:#f3f4f6;border:1px solid #e5e7eb;padding:6px 12px;border-radius:20px}
+.games{padding:0 24px 24px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:left}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)} .banner h1{font-size:28px}}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none;color:#111;transition:.2s;border:1px solid #f0f0f0}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#eee}
+.card b{display:block;padding:10px 12px;font-size:13px}
 </style>
 </head>
 <body>
-<div class="box">
-  <div class="head">
-    <h2>🔥 熱門遊戲福利</h2>
-    <span>點擊圖片即可前往領取</span>
+<div class="container">
+  <!-- 顶部Banner -->
+  <div class="banner">
+    <div class="banner-content">
+      <h4>✦ 最新福利活動 · 免費領取 ✦</h4>
+      <h1>遊戲福利中心</h1>
+      <div class="tags">
+        <span>🎁 最新活動</span><span>💎 專屬福利</span><span>🛡️ 安全可靠</span>
+      </div>
+    </div>
+    <div class="badge"><div>🎮<br>福利<br>中心</div></div>
   </div>
-  <div class="grid">
-    <a class="card" href="https://你的领取链接1" target="_blank"><img src="roblox.jpg"><p>ROBLOX</p></a>
-    <a class="card" href="https://你的领取链接2" target="_blank"><img src="valorant.jpg"><p>特戰英豪</p></a>
-    <a class="card" href="#" target="_blank"><img src="aov.jpg"><p>傳說對決</p></a>
-    <a class="card" href="#" target="_blank"><img src="love.jpg"><p>戀與深空</p></a>
-    <a class="card" href="#" target="_blank"><img src="heartopia.jpg"><p>心動小鎮</p></a>
-    <a class="card" href="#" target="_blank"><img src="brawlstars.jpg"><p>荒野亂鬥</p></a>
-    <a class="card" href="#" target="_blank"><img src="dunk.jpg"><p>全明星街球派對</p></a>
-    <a class="card" href="#" target="_blank"><img src="battlecats.jpg"><p>貓咪大戰爭</p></a>
-    <a class="card" href="#" target="_blank"><img src="wuwa.jpg"><p>鳴潮</p></a>
+
+  <div class="main">
+    <h2>遊戲福利中心</h2>
+    <p>提供多款熱門遊戲福利活動入口，立即領取最新活動與福利。</p>
+    <a class="btn" href="#games">🎁 立即領取福利</a>
+    <div class="mini"><span>官方福利入口</span><span>支援 10+ 款遊戲</span><span>持續更新中</span></div>
+  </div>
+
+  <!-- 游戏卡片 -->
+  <div class="games" id="games">
+    <div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>🔥 熱門遊戲福利</b><span style="font-size:12px;color:#888">點擊圖片即可前往領取</span></div>
+    <div class="grid">
+      <a class="card" href="#"><img src="roblox.jpg"><b>ROBLOX</b></a>
+      <a class="card" href="#"><img src="valorant.jpg"><b>特戰英豪</b></a>
+      <a class="card" href="#"><img src="aov.jpg"><b>傳說對決</b></a>
+      <a class="card" href="#"><img src="love.jpg"><b>戀與深空</b></a>
+      <a class="card" href="#"><img src="heartopia.jpg"><b>心動小鎮</b></a>
+      <a class="card" href="#"><img src="brawlstars.jpg"><b>荒野亂鬥</b></a>
+      <a class="card" href="#"><img src="dunk.jpg"><b>全明星街球派對</b></a>
+      <a class="card" href="#"><img src="battlecats.jpg"><b>貓咪大戰爭</b></a>
+    </div>
   </div>
 </div>
 </body>
